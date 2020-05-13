@@ -155,14 +155,14 @@ variable "data_disk_size_gb" {
   default     = []
 }
 
-variable "disk_datastore"{
-  type = string
-  default = null
+variable "disk_datastore" {
+  type    = string
+  default = ""
 }
 
 variable "data_disk_datastore" {
-  type        = list
-  default     = []
+  type    = list
+  default = []
   # validation {
   #   condition     = length(var.disk_datastore) == 0 || length(var.disk_datastore) == length(var.data_disk_size_gb)
   #       error_message = "The list of disk datastore must be equal in length to disk_size_gb"
